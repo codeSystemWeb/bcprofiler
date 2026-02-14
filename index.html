@@ -2,6 +2,19 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="A BC Profiler desenvolve lideranças e equipes com foco em performance, equilíbrio humano e resultados sustentáveis. Consultorias, mentorias e treinamentos corporativos." />
+
+<meta name="keywords" content="desenvolvimento humano, liderança, treinamento empresarial, mentoria executiva, consultoria organizacional, gestão de pessoas, performance empresarial Liderança feminina, 
+NR-1,
+Análise comportamental, 
+Carreira ,
+DISC ,
+Coach" />
+<meta name="author" content="BC Profiler" />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="pt-BR" />
+<meta property="og:title" content="BC Profiler | Desenvolvimento Humano Estratégico" />
+<meta property="og:description" content="Transformamos potencial humano em resultados sustentáveis para empresas e lideranças." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BC Profiler | Desenvolvimento Humano</title>
     <link rel="stylesheet" href="style.css" />
@@ -10,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
@@ -171,12 +184,10 @@
       <div class="container">
         <h2>Contato</h2>
 
-        <form class="form" action="contato.php" method="POST">
+        <form class="form" id="formContato">
           <input type="text" name="nome" placeholder="Seu nome" required />
 
-          <input type="email" name="email" placeholder="Seu e-mail" required />
-
-          <input type="text" name="telefone" placeholder="Telefone" />
+          <input type="tel" name="whats" placeholder="Seu WhatsApp" required />
 
           <textarea
             name="mensagem"
@@ -207,26 +218,27 @@
     <script src="script.js"></script>
 
     <script>
-const params = new URLSearchParams(window.location.search);
-const status = params.get("status");
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get("status");
 
-if(status){
-    const div = document.createElement("div");
-    div.classList.add("msg");
+      if (status) {
+        const div = document.createElement("div");
+        div.classList.add("msg");
 
-    if(status === "sucesso"){
-        div.classList.add("sucesso");
-        div.innerText = "Mensagem enviada com sucesso! Em breve entraremos em contato.";
-    } else {
-        div.classList.add("erro");
-        div.innerText = "Erro ao enviar. Tente novamente.";
-    }
+        if (status === "sucesso") {
+          div.classList.add("sucesso");
+          div.innerText =
+            "Mensagem enviada com sucesso! Em breve entraremos em contato.";
+        } else {
+          div.classList.add("erro");
+          div.innerText = "Erro ao enviar. Tente novamente.";
+        }
 
-    document.querySelector("#contato .container").prepend(div);
-}
-</script>
-<script>
-  AOS.init();
-</script>
+        document.querySelector("#contato .container").prepend(div);
+      }
+    </script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
