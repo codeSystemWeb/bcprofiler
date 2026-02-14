@@ -11,6 +11,20 @@ body{
     scroll-behavior:smooth;
 }
 
+/* ===== PARALLAX FIXO (NOVO) ===== */
+.bg-fixo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh;
+    background: url("./assets/bc.jpeg") center/cover no-repeat;
+    z-index: -1;
+    transform: translateZ(0);
+}
+
+/* ================================ */
+
 .container{
     width:90%;
     max-width:1200px;
@@ -51,15 +65,25 @@ nav a:hover{
     color:#d4af37;
 }
 
+/* ===== HERO CORRIGIDO ===== */
 .hero{
-    background:url("./assets/bc.jpeg") center/cover;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+    min-height: 100svh;
     color:#fff;
     padding:180px 0 120px;
     text-align:center;
+    position: relative;
+    z-index: 1;
 }
+
+/* overlay escuro opcional */
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
+}
+/* ========================== */
 
 .hero h1{
     font-size:36px;
@@ -72,6 +96,7 @@ nav a:hover{
 
 .section{
     padding:90px 0;
+    background: white;
 }
 
 .section h2{
