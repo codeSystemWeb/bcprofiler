@@ -2,19 +2,31 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="A BC Profiler desenvolve lideranças e equipes com foco em performance, equilíbrio humano e resultados sustentáveis. Consultorias, mentorias e treinamentos corporativos." />
+    <meta
+      name="description"
+      content="A BC Profiler desenvolve lideranças e equipes com foco em performance, equilíbrio humano e resultados sustentáveis. Consultorias, mentorias e treinamentos corporativos."
+    />
 
-<meta name="keywords" content="desenvolvimento humano, liderança, treinamento empresarial, mentoria executiva, consultoria organizacional, gestão de pessoas, performance empresarial Liderança feminina, 
+    <meta
+      name="keywords"
+      content="desenvolvimento humano, liderança, treinamento empresarial, mentoria executiva, consultoria organizacional, gestão de pessoas, performance empresarial Liderança feminina, 
 NR-1,
 Análise comportamental, 
 Carreira ,
 DISC ,
-Coach" />
-<meta name="author" content="BC Profiler" />
-<meta name="robots" content="index, follow" />
-<meta name="language" content="pt-BR" />
-<meta property="og:title" content="BC Profiler | Desenvolvimento Humano Estratégico" />
-<meta property="og:description" content="Transformamos potencial humano em resultados sustentáveis para empresas e lideranças." />
+Coach"
+    />
+    <meta name="author" content="BC Profiler" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="pt-BR" />
+    <meta
+      property="og:title"
+      content="BC Profiler | Desenvolvimento Humano Estratégico"
+    />
+    <meta
+      property="og:description"
+      content="Transformamos potencial humano em resultados sustentáveis para empresas e lideranças."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BC Profiler | Desenvolvimento Humano</title>
     <link rel="stylesheet" href="style.css" />
@@ -193,18 +205,66 @@ Coach" />
             name="mensagem"
             placeholder="Sua mensagem"
             required
-          ></textarea>
-
-          <!-- Honeypot anti-spam -->
-          <input type="text" name="empresa" style="display: none" />
-
+            ></textarea>
+            
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="empresa" style="display: none" />
+            
           <button type="submit">Enviar Mensagem</button>
         </form>
-
         <p class="presenca text-justify">
-          Entregas presenciais, online e In Company, com mobilidade para
-          projetos em todo o Brasil e no exterior.
+          Entregas presenciais, online e In Company, com mobilidade para projetos
+          em todo o Brasil e no exterior.
         </p>
+      </div>
+      <div class="redes">
+        <h3>Ou fale conosco pelas redes</h3>
+        
+        <div class="redes-grid">
+          <a
+          href="https://wa.me/5551997600239"
+          target="_blank"
+          class="rede-item whatsapp"
+          >
+            <span>📱</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>Fale diretamente conosco</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.instagram.com/bc_profiler/"
+            target="_blank"
+            class="rede-item instagram"
+          >
+            <span>📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <p>Acompanhe nossos conteúdos</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/lubandow/"
+            target="_blank"
+            class="rede-item linkedin"
+          >
+            <span>💼</span>
+            <div>
+              <strong>LinkedIn</strong>
+              <p>Conecte-se profissionalmente</p>
+            </div>
+          </a>
+          
+          <a href="mailto:cbcprofiler@gmail.com" class="rede-item email">
+            <span>✉️</span>
+            <div>
+              <strong>E-mail</strong>
+              <p>Envie uma mensagem</p>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -212,31 +272,11 @@ Coach" />
       <p>© 2026 BC Profiler - Desenvolvimento Humano Estratégico</p>
     </footer>
 
-    <a href="https://wa.me/5551997600239" class="whatsapp" target="_blank"
+    <a href="https://wa.me/5551997600239" class="whatsapp2" target="_blank"
       >WhatsApp</a
     >
     <script src="script.js"></script>
 
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const status = params.get("status");
-
-      if (status) {
-        const div = document.createElement("div");
-        div.classList.add("msg");
-
-        if (status === "sucesso") {
-          div.classList.add("sucesso");
-          div.innerText =
-            "Mensagem enviada com sucesso! Em breve entraremos em contato.";
-        } else {
-          div.classList.add("erro");
-          div.innerText = "Erro ao enviar. Tente novamente.";
-        }
-
-        document.querySelector("#contato .container").prepend(div);
-      }
-    </script>
     <script>
       AOS.init();
     </script>
